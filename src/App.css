@@ -1,38 +1,222 @@
-.App {
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="email"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* CSS */
+.buttonMain {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
   text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.buttonMain:hover,
+.buttonMain:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttonMain:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.buttonMain:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+.error {
+  margin-top: -10px;
+
+  color: red;
+}
+.form_main {
+  width: 50%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.form_head {
+  height: 100vh;
   align-items: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.initial_form_message {
+  position: absolute;
+  transition: position 0.7s, left 0.7s;
+  /* border: 1px solid black; */
+  margin-top: 20vh;
+  margin-left: 85vw;
+}
+.form_display_image {
+  width: 200px;
+  height: 200px;
+}
+.below_form_display {
+  background-color: #daebf7;
+  text-align: center;
+  padding-top: 20px;
+}
+.Congratulations {
+  font-weight: 900;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #2c5777;
+}
+.first {
+  padding-top: 20px;
+  color: #5894c0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+/* <!-- HTML !-->
+<button class="button-31" role="button">Button 31</button> */
+
+/* CSS */
+.button-31 {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 20px;
+
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 90%;
 }
 
-.App-link {
-  color: #61dafb;
+.button-31:hover,
+.button-31:focus {
+  opacity: 0.75;
+}
+@media only screen and (max-width: 600px) {
+  .initial_form_message {
+    display: none;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* <!-- HTML !-->
+<button class="button-44" role="button">Button 44</button> */
+
+/* CSS */
+.button-44 {
+  background: #e62143;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: Mija, -apple-system, BlinkMacSystemFont, Roboto, "Roboto Slab",
+    "Droid Serif", "Segoe UI", system-ui, Arial, sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 25.4929px;
+  /* padding: 0.8em 1em; */
+  text-align: center;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
+  text-underline-offset: 1px;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 10%;
+  word-break: break-word;
+  border: 0;
+  float: right;
+  margin-right: 10px;
+}
+
+.button-44:active,
+.button-44:focus {
+  border-bottom-style: none;
+  border-color: #dadada;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 3px 3px inset;
+  outline: 0;
+}
+
+.button-44:hover {
+  border-bottom-style: none;
+  border-color: #dadada;
+  background: #f34864;
+}
+.form_header {
+  border-left: 3px solid #77b2df;
+  padding-left: 10px;
+  /* margin: 10px; */
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #e62143;
 }
