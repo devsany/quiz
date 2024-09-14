@@ -33,48 +33,85 @@ const Level1 = () => {
           Back
         </button>
         {showScore ? (
-          score
-        ) : (
-          <div key={questions.id}>
-            <div>{questions[currentQuestion].question}</div>
-            <div>
-              {questions[currentQuestion].Image ? (
-                <div>
-                  <img src={questions[currentQuestion].Image} alt="question " />
-                </div>
-              ) : null}
+          <div className="score">
+            <div className="score_box">
+              <div style={{ fontSize: "25px" }}>Your total Score is</div>
+              <div style={{ fontSize: "20px", padding: "1rem" }}>
+                {score} {score <= 2 ? "🎆" : "🎇"}
+              </div>
+              <div style={{ padding: "0rem" }}>
+                {score} correct answers out of {questions.length}
+              </div>
+              <div style={{ marginTop: "7rem", fontSize: "13px" }}>
+                {(score / questions.length) * 100} % -- Congratulations
+              </div>
+              <div style={{ fontSize: "13px" }}>
+                {score <= 2
+                  ? "Work Hard next time do better"
+                  : "You are a spelling champion"}
+              </div>
             </div>
-            {questions[currentQuestion].options.map((item) => {
-              return (
-                <>
-                  <button onClick={() => setAnswer(item)}>{item}</button>
-                </>
-              );
-            })}
+          </div>
+        ) : (
+          <div className="question_field">
+            <div className="question_field_content" key={questions.id}>
+              <div className="field_question">
+                ({currentQuestion + 1}) {questions[currentQuestion].question}
+              </div>
+              <div>
+                {questions[currentQuestion].Image ? (
+                  <div className="question_image">
+                    <img
+                      src={questions[currentQuestion].Image}
+                      alt="question "
+                    />
+                  </div>
+                ) : null}
+              </div>
+              {questions[currentQuestion].options.map((item) => {
+                return (
+                  <>
+                    <div className="question_option">
+                      <button
+                        className="button-26"
+                        onClick={() => setAnswer(item)}
+                      >
+                        {item}
+                      </button>
+                    </div>
+                  </>
+                );
+              })}
 
-            <div>
-              {currentQuestion === 0 ? null : (
-                <button onClick={() => setCurrentQuestion((p) => p - 1)}>
-                  Previous
-                </button>
-              )}
-              {currentQuestion === questions.length - 1 ? (
-                <button
-                  onClick={() =>
-                    handleSubmitTest(questions[currentQuestion].answer)
-                  }
-                >
-                  Submit
-                </button>
-              ) : (
-                <button
-                  onClick={() =>
-                    handleSubmit(questions[currentQuestion].answer)
-                  }
-                >
-                  Next
-                </button>
-              )}
+              <div>
+                {currentQuestion === 0 ? null : (
+                  <button
+                    className="button-37"
+                    onClick={() => setCurrentQuestion((p) => p - 1)}
+                  >
+                    Previous
+                  </button>
+                )}
+                {currentQuestion === questions.length - 1 ? (
+                  <button
+                    className="button-62"
+                    onClick={() =>
+                      handleSubmitTest(questions[currentQuestion].answer)
+                    }
+                  >
+                    Submit
+                  </button>
+                ) : (
+                  <button
+                    className="button-38"
+                    onClick={() =>
+                      handleSubmit(questions[currentQuestion].answer)
+                    }
+                  >
+                    Next
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         )}
