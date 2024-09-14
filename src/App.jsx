@@ -8,6 +8,10 @@ import { setIn } from "formik";
 import English from "./component/class1/subject/English";
 import Header from "./component/header/Header";
 import Level1 from "./component/class1/level/Level1";
+import Level2 from "./component/class1/level/Level2";
+import Level3 from "./component/class1/level/Level3";
+import Level4 from "./component/class1/level/Level4";
+import Level5 from "./component/class1/level/Level5";
 
 function App() {
   const [name, setName] = useState("");
@@ -139,6 +143,23 @@ function App() {
                   <Route
                     path="/class1/english/english_level1"
                     element={<Level1 />}
+                  />
+                  <Route
+                    path="/class1/english/english_level2"
+                    element={<Level2 />}
+                  />
+                  <Route
+                    path="/class1/english/english_level3"
+                    element={<Level3 />}
+                  />
+                  <Route
+                    path="/class1/english/english_level4"
+                    element={<Level4 />}
+                  />
+
+                  <Route
+                    path="/class1/english/english_level5"
+                    element={<Level5 />}
                   />
                 </Routes>
               </div>
