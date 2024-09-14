@@ -13,7 +13,9 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [standard, setStandard] = useState("");
-  const [toggle, setToggle] = useState(false);
+  // important point 👇🏻
+  const [toggle, setToggle] = useState(true);
+  // important point  👆🏻
   const [error, setError] = useState({});
   const [message, setMessage] = useState(true);
   const handleSubmit = (e) => {
