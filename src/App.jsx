@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { setIn } from "formik";
 import English from "./component/class1/subject/English";
 import Header from "./component/header/Header";
+import Level1 from "./component/class1/level/Level1";
 
 function App() {
   const [name, setName] = useState("");
@@ -133,6 +134,10 @@ function App() {
                   <Route path="/" element={<Overview />} />
                   <Route path="/class1" element={<Class1Main />} />
                   <Route path="/class1/english" element={<English />} />
+                  <Route
+                    path="/class1/english/english_level1"
+                    element={<Level1 />}
+                  />
                 </Routes>
               </div>
             </div>
