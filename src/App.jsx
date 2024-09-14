@@ -5,6 +5,8 @@ import Class1Main from "./component/class1/Class1Main";
 import Navbar from "./component/navbar/Navbar";
 import { useEffect, useState } from "react";
 import { setIn } from "formik";
+import English from "./component/class1/subject/English";
+import Header from "./component/header/Header";
 
 function App() {
   const [name, setName] = useState("");
@@ -26,6 +28,10 @@ function App() {
       setToggle(true);
     }
     setError(error);
+    setMessage(false);
+    localStorage.setItem("name", name);
+    localStorage.setItem("email", email);
+    localStorage.setItem("standard", standard);
   };
   useEffect(() => {
     const messageShow = setInterval(() => {
@@ -48,7 +54,7 @@ function App() {
           <div>
             <img
               className="form_display_image"
-              src=" 5643120.jpg"
+              src="5643120.jpg"
               alt="Good luck"
             />
           </div>
@@ -76,7 +82,7 @@ function App() {
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Enter your name address"
+                    placeholder="Enter your name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                   />
@@ -89,7 +95,7 @@ function App() {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Enter your Email address"
+                    placeholder="Enter your Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
@@ -116,14 +122,20 @@ function App() {
         </>
       ) : (
         <div className="App">
-          <div>
-            <Navbar />
-          </div>
-          <div>
-            <Routes>
-              <Route path="/" element={<Overview />} />
-              <Route path="/class1" element={<Class1Main />} />
-            </Routes>
+          <div className="home_layout">
+            <div className="nabbar_layout">
+              <Navbar />
+            </div>
+            <div>
+              <Header />
+              <div className="box_subject">
+                <Routes>
+                  <Route path="/" element={<Overview />} />
+                  <Route path="/class1" element={<Class1Main />} />
+                  <Route path="/class1/english" element={<English />} />
+                </Routes>
+              </div>
+            </div>
           </div>
         </div>
       )}
