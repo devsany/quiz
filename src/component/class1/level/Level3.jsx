@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { class1_level3 } from "./level3json";
 
@@ -8,9 +8,11 @@ const Level3 = () => {
   const [score, setScore] = useState(0);
   const [answer, setAnswer] = useState("");
   const [showScore, setShowScore] = useState(false);
+  const [timer, setTimer] = useState(60);
+  const [finalTimer, setFinalTimer] = useState(0);
 
   const nav = useNavigate();
-  console.log("score", score, currentQuestion);
+  // console.log("score", score, currentQuestion);
   // console.log("question length", questions.length);
   // console.log("current", currentQuestion);
   const handleSubmit = (ans) => {
@@ -25,7 +27,22 @@ const Level3 = () => {
       setScore(score + 1);
     }
     setShowScore(true);
+    setFinalTimer(timer);
+
   };
+  useEffect(() => {
+    const time = setInterval(() => {
+      if (timer > 0) {
+        setTimer(timer - 1);
+      } else {
+        setFinalTimer(timer);
+        setShowScore(true);
+      }
+    }, 1000);
+    return () => {
+      clearInterval(time);
+    };
+  }, [timer]);
   return (
     <div>
       <div>
@@ -41,7 +58,8 @@ const Level3 = () => {
               </div>
               <div style={{ padding: "0rem" }}>
                 {score} correct answers out of {questions.length}
-              </div>
+              </div>  <hr /> You Take {60 - finalTimer}{" "}
+              {60 - finalTimer <= 1 ? "Second" : "Seconds"} to complete Test
               <div style={{ marginTop: "7rem", fontSize: "13px" }}>
                 {(score / questions.length) * 100} % -- Congratulations
               </div>
@@ -55,6 +73,12 @@ const Level3 = () => {
         ) : (
           <div className="question_field">
             <div className="question_field_content" key={questions.id}>
+            <div
+                className="button-32"
+                style={{ backgroundColor: timer <= 5 ? "orange" : "#fff000" }}
+              >
+                {timer}
+              </div>
               <div className="field_question">
                 ({currentQuestion + 1}) {questions[currentQuestion].question}
               </div>

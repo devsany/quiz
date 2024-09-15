@@ -12,13 +12,25 @@ import Level2 from "./component/class1/level/Level2";
 import Level3 from "./component/class1/level/Level3";
 import Level4 from "./component/class1/level/Level4";
 import Level5 from "./component/class1/level/Level5";
+import Science from "./component/class1/subject/Science";
+import Level1Class1Science from "./component/class1/scienceQuizLevel/Level1Class1Science";
+import Level2Class1Science from "./component/class1/scienceQuizLevel/Level2Class1Science";
+import Level3Class1Science from "./component/class1/scienceQuizLevel/Level3Class1Science";
+import Level4Class1Science from "./component/class1/scienceQuizLevel/Level4Class1Science";
+import Level5Class1Science from "./component/class1/scienceQuizLevel/Level5Class1Science";
+import Math from "./component/class1/subject/Math";
+import Level4Class1Math from "./component/class1/mathQuizLevel/Level4Class1Math";
+import Level2Class1Math from "./component/class1/mathQuizLevel/Level2Class1Math";
+import Level3Class1Math from "./component/class1/mathQuizLevel/Level3Class1Math";
+import Level1Class1Math from "./component/class1/mathQuizLevel/Level1Class1Math";
+import Level5Class1Math from "./component/class1/mathQuizLevel/Level5Class1Math";
 
 function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [standard, setStandard] = useState("");
   // important point 👇🏻
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   // important point  👆🏻
   const [error, setError] = useState({});
   const [message, setMessage] = useState(true);
@@ -161,6 +173,57 @@ function App() {
                     path="/class1/english/english_level5"
                     element={<Level5 />}
                   />
+
+                  {/* science class 1 start */}
+                  <Route path="/class1/science" element={<Science />} />
+                  <Route
+                    path="/class1/science/science_level1"
+                    element={<Level1Class1Science />}
+                  />
+                  <Route
+                    path="/class1/science/science_level2"
+                    element={<Level2Class1Science />}
+                  />
+                  <Route
+                    path="/class1/science/science_level3"
+                    element={<Level3Class1Science />}
+                  />
+                  <Route
+                    path="/class1/science/science_level4"
+                    element={<Level4Class1Science />}
+                  />
+
+                  <Route
+                    path="/class1/science/science_level5"
+                    element={<Level5Class1Science />}
+                  />
+
+                  {/* science class 1 end */}
+
+                  {/* math class 1 start  */}
+                  <Route path="/class1/math" element={<Math />} />
+                  <Route
+                    path="/class1/math/math_level1"
+                    element={<Level1Class1Math />}
+                  />
+                  <Route
+                    path="/class1/math/math_level2"
+                    element={<Level2Class1Math />}
+                  />
+                  <Route
+                    path="/class1/math/math_level3"
+                    element={<Level3Class1Math />}
+                  />
+                  <Route
+                    path="/class1/math/math_level4"
+                    element={<Level4Class1Math />}
+                  />
+
+                  <Route
+                    path="/class1/math/math_level5"
+                    element={<Level5Class1Math />}
+                  />
+                  {/* math class 1 end */}
                 </Routes>
               </div>
             </div>

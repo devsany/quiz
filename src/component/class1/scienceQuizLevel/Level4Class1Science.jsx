@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { class1_level5 } from "./level5json";
+import { class1_level4 } from "./Level4Class1Sciencejson";
 
-const Level5 = () => {
-  const [questions, setQuestion] = useState(class1_level5);
+const Level4Class1Science = () => {
+  const [questions, setQuestion] = useState(class1_level4);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [answer, setAnswer] = useState("");
   const [showScore, setShowScore] = useState(false);
-  const [timer, setTimer] = useState(90);
+  const [timer, setTimer] = useState(300);
   const [finalTimer, setFinalTimer] = useState(0);
 
   const nav = useNavigate();
@@ -45,7 +45,7 @@ const Level5 = () => {
   return (
     <div>
       <div>
-        <button onClick={() => nav("/class1/english")} className="back">
+        <button onClick={() => nav("/class1/science")} className="back">
           Back
         </button>
         {showScore ? (
@@ -161,4 +161,4 @@ const Level5 = () => {
   );
 };
 
-export default Level5;
+export default Level4Class1Science;

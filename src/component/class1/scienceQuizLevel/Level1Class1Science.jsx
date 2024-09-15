@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { class1_level5 } from "./level5json";
+import { class1_level1 } from "./Level1Class1Sciencejson";
 
-const Level5 = () => {
-  const [questions, setQuestion] = useState(class1_level5);
+const Level1Class1Science = () => {
+  const [questions, setQuestion] = useState(class1_level1);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [answer, setAnswer] = useState("");
   const [showScore, setShowScore] = useState(false);
-  const [timer, setTimer] = useState(90);
+  const [timer, setTimer] = useState(60);
   const [finalTimer, setFinalTimer] = useState(0);
 
   const nav = useNavigate();
@@ -26,8 +26,8 @@ const Level5 = () => {
     if (ans === answer) {
       setScore(score + 1);
     }
-    setFinalTimer(timer);
     setShowScore(true);
+    setFinalTimer(timer);
   };
   useEffect(() => {
     const time = setInterval(() => {
@@ -45,9 +45,10 @@ const Level5 = () => {
   return (
     <div>
       <div>
-        <button onClick={() => nav("/class1/english")} className="back">
+        <button onClick={() => nav("/class1/science")} className="back">
           Back
         </button>
+
         {showScore ? (
           <div className="score">
             <div className="score_box">
@@ -57,9 +58,9 @@ const Level5 = () => {
               </div>
               <div style={{ padding: "0rem" }}>
                 {score} correct answers out of {questions.length}
-              </div>{" "}
-              <hr /> You Take {60 - finalTimer}{" "}
-              {60 - finalTimer <= 1 ? "Second" : "Seconds"} to complete Test
+                <hr /> You Take {60 - finalTimer}{" "}
+                {60 - finalTimer <= 1 ? "Second" : "Seconds"} to complete Test
+              </div>
               <div style={{ marginTop: "7rem", fontSize: "13px" }}>
                 {(score / questions.length) * 100} % -- Congratulations
               </div>
@@ -106,7 +107,6 @@ const Level5 = () => {
                   </>
                 );
               })}
-
               <div>
                 {currentQuestion === 0 ? null : (
                   <button
@@ -161,4 +161,4 @@ const Level5 = () => {
   );
 };
 
-export default Level5;
+export default Level1Class1Science;

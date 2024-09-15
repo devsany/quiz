@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { class1_level1 } from "./level1json";
 
@@ -8,9 +8,11 @@ const Level1 = () => {
   const [score, setScore] = useState(0);
   const [answer, setAnswer] = useState("");
   const [showScore, setShowScore] = useState(false);
+  const [timer, setTimer] = useState(60);
+  const [finalTimer, setFinalTimer] = useState(0);
 
   const nav = useNavigate();
-  console.log("score", score, currentQuestion);
+  // console.log("score", score, currentQuestion);
   // console.log("question length", questions.length);
   // console.log("current", currentQuestion);
   const handleSubmit = (ans) => {
@@ -25,13 +27,28 @@ const Level1 = () => {
       setScore(score + 1);
     }
     setShowScore(true);
+    setFinalTimer(timer);
   };
+  useEffect(() => {
+    const time = setInterval(() => {
+      if (timer > 0) {
+        setTimer(timer - 1);
+      } else {
+        setFinalTimer(timer);
+        setShowScore(true);
+      }
+    }, 1000);
+    return () => {
+      clearInterval(time);
+    };
+  }, [timer]);
   return (
     <div>
       <div>
         <button onClick={() => nav("/class1/english")} className="back">
           Back
         </button>
+
         {showScore ? (
           <div className="score">
             <div className="score_box">
@@ -41,6 +58,8 @@ const Level1 = () => {
               </div>
               <div style={{ padding: "0rem" }}>
                 {score} correct answers out of {questions.length}
+                <hr /> You Take {60 - finalTimer}{" "}
+                {60 - finalTimer <= 1 ? "Second" : "Seconds"} to complete Test
               </div>
               <div style={{ marginTop: "7rem", fontSize: "13px" }}>
                 {(score / questions.length) * 100} % -- Congratulations
@@ -55,6 +74,12 @@ const Level1 = () => {
         ) : (
           <div className="question_field">
             <div className="question_field_content" key={questions.id}>
+              <div
+                className="button-32"
+                style={{ backgroundColor: timer <= 5 ? "orange" : "#fff000" }}
+              >
+                {timer}
+              </div>
               <div className="field_question">
                 ({currentQuestion + 1}) {questions[currentQuestion].question}
               </div>
@@ -82,7 +107,6 @@ const Level1 = () => {
                   </>
                 );
               })}
-
               <div>
                 {currentQuestion === 0 ? null : (
                   <button
