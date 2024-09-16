@@ -1,39 +1,33 @@
 export const class1_level4 = [
-    {
-      id: 1,
-      question: "Synonyms of Beautiful is",
-      options: ["Pretty", "Ugly", "Bad", "Poor"],
-      answer: "Pretty",
-    },
-    {
-      id: 2,
-      question: "Synonyms of Happy is",
- 
-      options: ["Cry", "Sad", "Cheerful", "Upset"],
-      answer: "Cheerful",
-    },
-    {
-      id: 3,
-      question: "Synonyms of Big is",
+  {
+    id: 1,
+    question: "Antonyms of FOREMOST",
+    options: ["Handmost", "Unimportant", "Mature", "Premature"],
+    answer: "Unimportant",
+  },
+  {
+    id: 2,
+    question: "Antonyms of PROTECTS",
+    options: ["Defends", "Deprives", "Deserts", "Secures"],
+    answer: "Deserts",
+  },
+  {
+    id: 3,
+    question: "Antonyms of BEAUTIFUL",
+    options: ["Wonderful", "Ugly", "Marvelous", "Handsome"],
+    answer: "Ugly",
+  },
+  {
+    id: 4,
+    question: "Antonyms of TERRIBLE",
+    options: ["Soothing", "Frightening", "Scaring", "Delectable"],
+    answer: "Soothing",
+  },
 
-      options: ["Large", "Small", "Full", "None of these"],
-      answer: "Large",
-    },
-    {
-      id: 4,
-      question: "Synonyms of Small is",
-
-      
-      options: ["Tiny", "Big", "Giant", "Large"],
-      answer: "Tiny",
-    },
-    {
-      id: 5,
-      question: "Synonyms of Smart is",
-
-  
-      options: ["Clever", "Silent", "Respect", "Upset"],
-      answer: "Clever",
-    },
-  ];
-  
+  {
+    id: 5,
+    question: "Antonyms of WIDELY",
+    options: ["Spaciously", "Narrowly", "Limitedly", "Broad based"],
+    answer: "Narrowly",
+  },
+];
