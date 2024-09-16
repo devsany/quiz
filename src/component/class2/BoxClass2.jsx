@@ -17,7 +17,7 @@ const BoxClass2 = () => {
       </h2>
       <div className="box_subject_class">
         <div className="box">
-          <NavLink to="/class1/math">
+          <NavLink to="/class2/math">
             <img
               className="subject_image"
               src="math.png"

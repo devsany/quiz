@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { class1_level2 } from "./Level2Class1Mathjson";
 
-const Level2Class1Math = () => {
+const Level2Class2Math = () => {
   const [questions, setQuestion] = useState(class1_level2);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -46,7 +46,7 @@ const Level2Class1Math = () => {
   return (
     <div>
       <div>
-        <button onClick={() => nav("/class1/math")} className="back">
+        <button onClick={() => nav("/class2/math")} className="back">
           Back
         </button>
         {showScore ? (
@@ -162,4 +162,4 @@ const Level2Class1Math = () => {
   );
 };
 
-export default Level2Class1Math;
+export default Level2Class2Math;

@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Worksheet from "../worksheet/Worksheet";
 
-const Math = () => {
+const Math2 = () => {
   const nav = useNavigate();
 
   return (
@@ -18,31 +18,31 @@ const Math = () => {
       </h2>
       <div className="quiz_button">
         <button
-          onClick={() => nav("/class1/math/math_level1")}
+          onClick={() => nav("/class2/math/math_level1")}
           className="button_level_1"
         >
           Level 1
         </button>
         <button
-          onClick={() => nav("/class1/math/math_level2")}
+          onClick={() => nav("/class2/math/math_level2")}
           className="button_level_1"
         >
           Level 2
         </button>
         <button
-          onClick={() => nav("/class1/math/math_level3")}
+          onClick={() => nav("/class2/math/math_level3")}
           className="button_level_1"
         >
           Level 3
         </button>
         <button
-          onClick={() => nav("/class1/math/math_level4")}
+          onClick={() => nav("/class2/math/math_level4")}
           className="button_level_1"
         >
           Level 4
         </button>
         <button
-          onClick={() => nav("/class1/math/math_level5")}
+          onClick={() => nav("/class2/math/math_level5")}
           className="button_level_1"
         >
           Level 5
@@ -55,4 +55,4 @@ const Math = () => {
   );
 };
 
-export default Math;
+export default Math2;

@@ -26,7 +26,7 @@ export const class1_level3 = [
   {
     id: 5,
     question: "19 - 10 =",
-    options: ["10", "23", "20", "20"],
-    answer: "10",
+    options: ["10", "23", "20", "9"],
+    answer: "9",
   },
 ];

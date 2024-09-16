@@ -39,6 +39,12 @@ import Level2_2 from "./component/class2/level/Level2";
 import Level3_2 from "./component/class2/level/Level3";
 import Level5_2 from "./component/class2/level/Level5";
 import Level4_2 from "./component/class2/level/Level4";
+import Math2 from "./component/class2/subject/Math2";
+import Level1Class2Math from "./component/class2/mathQuizLevel/Level1Class1Math";
+import Level2Class2Math from "./component/class2/mathQuizLevel/Level2Class1Math";
+import Level3Class2Math from "./component/class2/mathQuizLevel/Level3Class1Math";
+import Level4Class2Math from "./component/class2/mathQuizLevel/Level4Class1Math";
+import Level5Class2Math from "./component/class2/mathQuizLevel/Level5Class1Math";
 
 function App() {
   const [name, setName] = useState("");
@@ -166,27 +172,22 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Overview />} />
                   <Route path="/class1" element={<Class1Main />} />
-
                   {/* class 2  */}
                   <Route path="/class2" element={<Class2Main />} />
-
                   {/* class 2👆🏻 */}
                   <Route path="/learn_with_fun" element={<Learnwithfun />} />
                   <Route
                     path="/learn_with_fun/identify_animal"
                     element={<Identify_animal />}
                   />
-
                   <Route
                     path="/learn_with_fun/identify_flower"
                     element={<Identify_flower />}
                   />
-
                   <Route
                     path="/learn_with_fun/identify_bodypart"
                     element={<Identify_bodypart />}
                   />
-
                   <Route
                     path="/learn_with_fun/identify_vegetable"
                     element={<Identify_vegetable />}
@@ -217,7 +218,6 @@ function App() {
                     path="/class1/english/english_level2"
                     element={<Level2 />}
                   />
-
                   <Route
                     path="/class2/english/english_level2"
                     element={<Level2_2 />}
@@ -264,14 +264,11 @@ function App() {
                     path="/class1/science/science_level4"
                     element={<Level4Class1Science />}
                   />
-
                   <Route
                     path="/class1/science/science_level5"
                     element={<Level5Class1Science />}
                   />
-
                   {/* science class 1 end */}
-
                   {/* math class 1 start  */}
                   <Route path="/class1/math" element={<Math />} />
                   <Route
@@ -290,12 +287,36 @@ function App() {
                     path="/class1/math/math_level4"
                     element={<Level4Class1Math />}
                   />
-
                   <Route
                     path="/class1/math/math_level5"
                     element={<Level5Class1Math />}
                   />
                   {/* math class 1 end */}
+
+                  {/* math class 2 start */}
+                  <Route path="/class2/math" element={<Math2 />} />
+
+                  <Route
+                    path="/class2/math/math_level1"
+                    element={<Level1Class2Math />}
+                  />
+                  <Route
+                    path="/class2/math/math_level2"
+                    element={<Level2Class2Math />}
+                  />
+                  <Route
+                    path="/class2/math/math_level3"
+                    element={<Level3Class2Math />}
+                  />
+                  <Route
+                    path="/class2/math/math_level4"
+                    element={<Level4Class2Math />}
+                  />
+                  <Route
+                    path="/class2/math/math_level5"
+                    element={<Level5Class2Math />}
+                  />
+                  {/* maths class 2 end */}
                 </Routes>
               </div>
             </div>
