@@ -244,10 +244,15 @@ select {
   padding: 5px;
   border-radius: 5px;
 }
+
 .navbar_children a:hover {
   background-color: #a673e4;
+  color: #fff;
 }
-
+.active {
+  background-color: #a673e4;
+  color: #fff;
+}
 /* CSS */
 .navbar_children a {
   background-color: #ffffff;

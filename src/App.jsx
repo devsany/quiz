@@ -28,6 +28,17 @@ import Learnwithfun from "./component/learn_with_fun/Learnwithfun";
 import Identify_animal from "./component/identify_type_quiz/Identify_animal";
 import Identify_flower from "./component/identify_type_quiz/Identify_flower";
 import Identify_bodypart from "./component/identify_type_quiz/Idebtify_bodypart";
+import Math_buz from "./component/identify_type_quiz/Math_buz";
+import Identify_vegetable from "./component/identify_type_quiz/Identify_vegetable";
+import Identify_weather from "./component/identify_type_quiz/Identify_weather";
+import Identify_house from "./component/identify_type_quiz/Identify_house";
+import Class2Main from "./component/class2/Class2Main";
+import English2 from "./component/class2/subject/English";
+import Level1_2 from "./component/class2/level/Level1";
+import Level2_2 from "./component/class2/level/Level2";
+import Level3_2 from "./component/class2/level/Level3";
+import Level5_2 from "./component/class2/level/Level5";
+import Level4_2 from "./component/class2/level/Level4";
 
 function App() {
   const [name, setName] = useState("");
@@ -155,6 +166,11 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Overview />} />
                   <Route path="/class1" element={<Class1Main />} />
+
+                  {/* class 2  */}
+                  <Route path="/class2" element={<Class2Main />} />
+
+                  {/* class 2👆🏻 */}
                   <Route path="/learn_with_fun" element={<Learnwithfun />} />
                   <Route
                     path="/learn_with_fun/identify_animal"
@@ -170,29 +186,66 @@ function App() {
                     path="/learn_with_fun/identify_bodypart"
                     element={<Identify_bodypart />}
                   />
+
+                  <Route
+                    path="/learn_with_fun/identify_vegetable"
+                    element={<Identify_vegetable />}
+                  />
+                  <Route
+                    path="/learn_with_fun/identify_weather"
+                    element={<Identify_weather />}
+                  />
+                  <Route
+                    path="/learn_with_fun/identify_house"
+                    element={<Identify_house />}
+                  />
+                  <Route
+                    path="/learn_with_fun/math_buz"
+                    element={<Math_buz />}
+                  />
                   <Route path="/class1/english" element={<English />} />
+                  <Route path="/class2/english" element={<English2 />} />
                   <Route
                     path="/class1/english/english_level1"
                     element={<Level1 />}
                   />
                   <Route
+                    path="/class2/english/english2_level1"
+                    element={<Level1_2 />}
+                  />
+                  <Route
                     path="/class1/english/english_level2"
                     element={<Level2 />}
+                  />
+
+                  <Route
+                    path="/class2/english/english_level2"
+                    element={<Level2_2 />}
                   />
                   <Route
                     path="/class1/english/english_level3"
                     element={<Level3 />}
                   />
                   <Route
+                    path="/class2/english/english_level3"
+                    element={<Level3_2 />}
+                  />
+                  <Route
                     path="/class1/english/english_level4"
                     element={<Level4 />}
                   />
-
+                  <Route
+                    path="/class2/english/english_level4"
+                    element={<Level4_2 />}
+                  />
                   <Route
                     path="/class1/english/english_level5"
                     element={<Level5 />}
                   />
-
+                  <Route
+                    path="/class2/english/english_level5"
+                    element={<Level5_2 />}
+                  />
                   {/* science class 1 start */}
                   <Route path="/class1/science" element={<Science />} />
                   <Route

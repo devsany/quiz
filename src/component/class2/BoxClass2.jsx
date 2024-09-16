@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../../App.css";
 
-const BoxClass1 = () => {
+const BoxClass2 = () => {
   return (
     <div>
       <h2
@@ -10,14 +10,25 @@ const BoxClass1 = () => {
           borderLeft: "5px solid orange",
           marginLeft: "20px",
           paddingLeft: "10px",
-          color: "green",
+          color: "gray",
         }}
       >
-        Class 1 (Section A)
+        Class 2 (Section A)
       </h2>
       <div className="box_subject_class">
         <div className="box">
-          <NavLink to="/class1/english">
+          <NavLink to="/class1/math">
+            <img
+              className="subject_image"
+              src="math.png"
+              alt="Mathematics"
+              title="mathematics"
+            />
+            <span className="subject_name"> Mathematics</span>
+          </NavLink>
+        </div>
+        <div className="box">
+          <NavLink to="/class2/english">
             <img
               className="subject_image"
               src="english.png"
@@ -43,22 +54,10 @@ const BoxClass1 = () => {
         </div>
 
         {/* third */}
-        <div className="box">
-          <NavLink to="/class1/math">
-            <img
-              className="subject_image"
-              src="math.png"
-              alt="Mathematics"
-              title="mathematics"
-            />
-            <span className="subject_name"> Mathematics</span>
-          </NavLink>
-        </div>
       </div>
-
       {/* second */}
     </div>
   );
 };
 
-export default BoxClass1;
+export default BoxClass2;
