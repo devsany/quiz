@@ -20,6 +20,7 @@ const Navbar = () => {
             />
           </span>
           <NavLink to="/">Home</NavLink>
+          <NavLink to="/learn_with_fun">Learn with fun</NavLink>
           <NavLink to="/class1">Class 1</NavLink>
         </div>
       </div>

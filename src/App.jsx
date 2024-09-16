@@ -24,6 +24,10 @@ import Level2Class1Math from "./component/class1/mathQuizLevel/Level2Class1Math"
 import Level3Class1Math from "./component/class1/mathQuizLevel/Level3Class1Math";
 import Level1Class1Math from "./component/class1/mathQuizLevel/Level1Class1Math";
 import Level5Class1Math from "./component/class1/mathQuizLevel/Level5Class1Math";
+import Learnwithfun from "./component/learn_with_fun/Learnwithfun";
+import Identify_animal from "./component/identify_type_quiz/Identify_animal";
+import Identify_flower from "./component/identify_type_quiz/Identify_flower";
+import Identify_bodypart from "./component/identify_type_quiz/Idebtify_bodypart";
 
 function App() {
   const [name, setName] = useState("");
@@ -151,6 +155,21 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Overview />} />
                   <Route path="/class1" element={<Class1Main />} />
+                  <Route path="/learn_with_fun" element={<Learnwithfun />} />
+                  <Route
+                    path="/learn_with_fun/identify_animal"
+                    element={<Identify_animal />}
+                  />
+
+                  <Route
+                    path="/learn_with_fun/identify_flower"
+                    element={<Identify_flower />}
+                  />
+
+                  <Route
+                    path="/learn_with_fun/identify_bodypart"
+                    element={<Identify_bodypart />}
+                  />
                   <Route path="/class1/english" element={<English />} />
                   <Route
                     path="/class1/english/english_level1"
