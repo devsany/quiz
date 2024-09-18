@@ -17,7 +17,7 @@ const Learnwithfun = () => {
       </h2>
       <NavLink className="button-26" to="/learn_with_fun/identify_animal">
         <div className="button-26">
-          <span className="text"> Identify Animal 🐕‍🦺</span>
+          <span className="text"> Identify Animal 🐕‍🦺 🐱</span>
         </div>
       </NavLink>
 
