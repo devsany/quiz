@@ -41,6 +41,7 @@ const Level1Class1Science = () => {
     return () => {
       clearInterval(time);
     };
+
   }, [timer]);
   return (
     <div>
@@ -48,7 +49,6 @@ const Level1Class1Science = () => {
         <button onClick={() => nav("/class1/science")} className="back">
           Back
         </button>
-
         {showScore ? (
           <div className="score">
             <div className="score_box">

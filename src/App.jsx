@@ -154,7 +154,7 @@ function App() {
                   />
                 </div>
                 <button className="buttonMain" type="submit">
-                  Submit
+                  submit
                 </button>
               </form>
             </div>
