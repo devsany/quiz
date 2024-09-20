@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, NavLink, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Overview from "./component/main/Overview";
 import Class1Main from "./component/class1/Class1Main";
@@ -45,6 +45,9 @@ import Level2Class2Math from "./component/class2/mathQuizLevel/Level2Class1Math"
 import Level3Class2Math from "./component/class2/mathQuizLevel/Level3Class1Math";
 import Level4Class2Math from "./component/class2/mathQuizLevel/Level4Class1Math";
 import Level5Class2Math from "./component/class2/mathQuizLevel/Level5Class1Math";
+import Chat from "./component/chat/Chat";
+import Chat1 from "./component/chat/chat_category/chat_with_animal/Chat_with_animals";
+import Chat_with_animals from "./component/chat/chat_category/chat_with_animal/Chat_with_animals";
 
 function App() {
   const [name, setName] = useState("");
@@ -168,6 +171,7 @@ function App() {
             </div>
             <div>
               <Header />
+
               <div className="box_subject">
                 <Routes>
                   <Route path="/" element={<Overview />} />
@@ -317,6 +321,13 @@ function App() {
                     element={<Level5Class2Math />}
                   />
                   {/* maths class 2 end */}
+
+                  {/* chat  route */}
+                  <Route path="/chat_quiz" element={<Chat />} />
+                  <Route
+                    path="/chat_quiz/chat_with_animals"
+                    element={<Chat_with_animals />}
+                  />
                 </Routes>
               </div>
             </div>
