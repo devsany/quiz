@@ -1468,6 +1468,7 @@ div:hover {
   background-color: #0039d7;
   color: #fff;
 }
+
 .answer_area {
   width: 30%;
   height: 50vh;
@@ -1476,7 +1477,9 @@ div:hover {
   border-radius: 5px;
   background-color: #66f379;
 }
+
 .question {
+  margin: 5px;
   width: 175px;
   font-size: 12px;
   padding: 5px;
@@ -1485,6 +1488,7 @@ div:hover {
   color: #0e0e0e;
   text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
 }
+
 .answer {
   float: right;
   margin: 5px;
@@ -1494,6 +1498,6 @@ div:hover {
   border-radius: 5px;
   background-color: #567fee;
   color: #fff;
-  text-align: right;
+  text-align: left;
   text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
 }

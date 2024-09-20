@@ -12,7 +12,7 @@ const Chat_animal = () => {
   const [error, setError] = useState("");
   const handleIncrement = (value) => {
     if (!inputValue) {
-      setError("require");
+      setError("Require");
     } else {
       setError("");
       setNumber(number + value);
@@ -20,8 +20,8 @@ const Chat_animal = () => {
       console.log(chat[number]);
       setInputValue("");
       console.log(number);
+      setResult([...result, chat[number]]);
     }
-    setResult([...result, chat[number]]);
   };
 
   const handleSubmit = (value) => {
@@ -31,6 +31,7 @@ const Chat_animal = () => {
     console.log(chat[number]);
     console.log("number", number);
     console.log("chat length", chat.length);
+    setResult([...result, chat[number]]);
   };
 
   const handleFinalResultBack = () => {
@@ -51,77 +52,63 @@ const Chat_animal = () => {
 
   return (
     <>
-      {showFinalResult ? (
-        <div>
-          <div>
-            <button onClick={handleFinalResultBack}>Back</button>
-          </div>
-          {chat.map((item) => {
-            return (
-              <>
-                id: {item.id}
-                name: {item.question}
-                Answer: {item.answer}
-                <hr />
-              </>
-            );
-          })}
-        </div>
-      ) : (
-        <div>
-          <div>Chat with my AI</div>
-          <div className="main_chat_field">
-            <div className="question_field_area">
-              <div className="question_area">
-                <div>Question id: {chat[number].id}</div>
-                <div style={{ fontSize: "20px" }}> {chat[number].question}</div>
-                <div>{error ? error : null}</div>
-              </div>
-              <div className="answer_area">
-                {result &&
-                  result.map((item) => {
-                    return (
-                      <>
+      <div>
+        <div>Chat with my AI</div>
+        <div className="main_chat_field">
+          <div className="question_field_area">
+            <div className="question_area">
+              <div>Question id: {chat[number].id}</div>
+              <div style={{ fontSize: "20px" }}> {chat[number].question}</div>
+            </div>
+            <div className="answer_area">
+              {result &&
+                result.map((item) => {
+                  return (
+                    <>
+                      <div style={{ display: "grid" }}>
                         <div className="question">{item.question}</div>
                         <div className="answer">{item.answer}</div>
-                      </>
-                    );
-                  })}
-              </div>
+                      </div>
+                    </>
+                  );
+                })}
             </div>
-            <div className="input_main_field">
-              <div className="chat_input_field">
-                <input
-                  ref={inputRef}
-                  type="text"
-                  placeholder={chat[number].question}
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                />
-              </div>
-              <div>
-                {chat[number].increment ? (
-                  <div>
-                    <button
-                      className="button-9"
-                      onClick={() => handleIncrement(chat[number].increment)}
-                    >
-                      Next
-                    </button>
-                  </div>
-                ) : (
+          </div>
+          <div style={{ margin: "5px", color: "red", fontWeight: "600" }}>
+            {error ? error : null}
+          </div>
+          <div className="input_main_field">
+            <div className="chat_input_field">
+              <input
+                ref={inputRef}
+                type="text"
+                placeholder={chat[number].question}
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+              />
+            </div>
+            <div>
+              {chat[number].increment ? (
+                <div>
                   <button
                     className="button-9"
-                    onClick={() => handleSubmit(chat[number].increment)}
+                    onClick={() => handleIncrement(chat[number].increment)}
                   >
-                    Submit
+                    Next
                   </button>
-                )}
-              </div>
+                </div>
+              ) : (
+                <button
+                  className="button-9"
+                  onClick={() => handleSubmit(chat[number].increment)}
+                >
+                  {showFinalResult ? "Submit" : "Next"}
+                </button>
+              )}
             </div>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 };
