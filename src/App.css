@@ -1476,3 +1476,24 @@ div:hover {
   border-radius: 5px;
   background-color: #66f379;
 }
+.question {
+  width: 175px;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #b8defd;
+  color: #0e0e0e;
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
+}
+.answer {
+  float: right;
+  margin: 5px;
+  width: 100px;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #567fee;
+  color: #fff;
+  text-align: right;
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
+}
