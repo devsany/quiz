@@ -101,8 +101,9 @@ const Chat_animal = () => {
                 <button
                   className="button-9"
                   onClick={() => handleSubmit(chat[number].increment)}
+                  
                 >
-                  {showFinalResult ? "Submit" : "Next"}
+                  Submit{" "}
                 </button>
               )}
             </div>
