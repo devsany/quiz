@@ -92,7 +92,7 @@ function App() {
       {message ? (
         <div className="initial_form_message">
           <div onClick={handleMessageHide} className="button-44">
-            x
+            X
           </div>
           <div>
             <img
