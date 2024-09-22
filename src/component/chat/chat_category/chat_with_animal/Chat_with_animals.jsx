@@ -9,12 +9,14 @@ const Chat_with_animals = () => {
       <div className="chat_main">
         <div className="chat_nav_main">
           <NavLink to="/chat_quiz/chat_with_animals">
-            <div className="chat_nav_link">Chat with Animal</div>
+            <div className="chat_nav_link">Test yourself</div>
           </NavLink>
         </div>
 
         <div className="chat_area">
-          <button onClick={() => nav("/chat_quiz")}>Back</button>
+          <button className="button-4" onClick={() => nav("/chat_quiz")}>
+            Back
+          </button>
           <Chat_animal />
         </div>
       </div>

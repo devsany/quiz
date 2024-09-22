@@ -8,6 +8,7 @@ const Chat_animal = () => {
   const [inputValue, setInputValue] = useState("");
   const [result, setResult] = useState([]);
   const [showFinalResult, setShowFinalResult] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   const [error, setError] = useState("");
   const handleIncrement = (value) => {
@@ -32,6 +33,7 @@ const Chat_animal = () => {
     console.log("number", number);
     console.log("chat length", chat.length);
     setResult([...result, chat[number]]);
+    setIsDisabled(true);
   };
 
   const handleFinalResultBack = () => {
@@ -46,6 +48,12 @@ const Chat_animal = () => {
       inputRef.current.focus();
     }
   };
+
+  // const handleClick = () => {
+  //   // Your click logic here
+  //   console.log("Button clicked!");
+  //  // Disable button after click
+  // };
   useEffect(() => {
     handleFocus();
   });
@@ -107,10 +115,12 @@ const Chat_animal = () => {
                 </div>
               ) : (
                 <button
+                  disabled={isDisabled}
                   className="button-9"
+                  style={{ backgroundColor: isDisabled && "red" }}
                   onClick={() => handleSubmit(chat[number].increment)}
                 >
-                  Submit{" "}
+                  Submit
                 </button>
               )}
             </div>
