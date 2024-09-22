@@ -53,7 +53,15 @@ const Chat_animal = () => {
   return (
     <>
       <div>
-        <div>Chat with my AI</div>
+        <h3
+          style={{
+            borderLeft: "4px solid #008970",
+            paddingLeft: 5,
+            color: "#008970",
+          }}
+        >
+          Chat with my AI
+        </h3>
         <div className="main_chat_field">
           <div className="question_field_area">
             <div className="question_area">
@@ -101,7 +109,6 @@ const Chat_animal = () => {
                 <button
                   className="button-9"
                   onClick={() => handleSubmit(chat[number].increment)}
-                  
                 >
                   Submit{" "}
                 </button>

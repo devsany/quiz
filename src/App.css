@@ -1381,7 +1381,7 @@ div:hover {
   /* width: 100%; */
   display: grid;
   /* align-items: ; */
-  height: 70vh;
+  height: 68vh;
   border: 1px solid black;
   align-content: space-between;
 }
@@ -1410,15 +1410,15 @@ div:hover {
   line-height: 1.15;
   margin-left: 5px;
   margin-top: 5px;
-  outline: none;
 
-  padding: 0 23px;
+  padding-left: 23px;
+  padding-right: 23px;
 
   text-align: center;
 
   transition: all 0.2s, box-shadow 0.08s ease-in;
 
-  width: 100%;
+  width: 90%;
 }
 
 .button-9:disabled {
@@ -1505,7 +1505,7 @@ div:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 85vh;
   width: 75%;
   /* border: 1px solid black; */
 }
