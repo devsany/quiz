@@ -70,7 +70,7 @@ const Math = () => {
             color: "#008970",
           }}
         >
-          Chat with my Animals
+          Chat with your Calculation Skill
         </h3>
         <div className="main_chat_field">
           <div className="question_field_area">
