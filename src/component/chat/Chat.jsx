@@ -1,5 +1,4 @@
 import React from "react";
-import Chat1 from "./chat_category/chat_with_animal/Chat_with_animals";
 import { NavLink } from "react-router-dom";
 
 const Chat = () => {
@@ -11,7 +10,17 @@ const Chat = () => {
             <div className="chat_nav_link">Chat with Animal</div>
           </NavLink>
         </div>
-        <div>hii one start chat</div>
+        <div className="chat_template">
+          <div style={{ textAlign: "center" }}>
+            <img
+              style={{ width: 250 }}
+              src="https://img.freepik.com/premium-vector/vector-illustration-cute-kids-chatting_723224-3295.jpg"
+              alt="chat img"
+            />
+            <h1 style={{ color: "purple" }}>Let's Go Start Chat</h1>
+            <h3>Select a Quiz to test yourself</h3>
+          </div>
+        </div>
       </div>
     </div>
   );

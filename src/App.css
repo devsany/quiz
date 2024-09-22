@@ -1501,3 +1501,11 @@ div:hover {
   text-align: left;
   text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
 }
+.chat_template {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 75%;
+  /* border: 1px solid black; */
+}
