@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { chat_Question } from "./api";
+import { chat_Question } from "../api/api";
 
 const Chat_animal = () => {
   //   const chat_question = useMemo(() => chat_Question, []);
@@ -68,7 +68,7 @@ const Chat_animal = () => {
             color: "#008970",
           }}
         >
-          Chat with my AI
+          Answer these question
         </h3>
         <div className="main_chat_field">
           <div className="question_field_area">

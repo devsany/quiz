@@ -9,6 +9,9 @@ const Chat = () => {
           <NavLink to="/chat_quiz/chat_with_animals">
             <div className="chat_nav_link">Test yourself</div>
           </NavLink>
+          <NavLink to="/chat_quiz/chat_with_animals">
+            <div className="chat_nav_link">Chat with Animals</div>
+          </NavLink>
         </div>
         <div className="chat_template">
           <div style={{ textAlign: "center" }}>

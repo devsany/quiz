@@ -46,8 +46,10 @@ import Level3Class2Math from "./component/class2/mathQuizLevel/Level3Class1Math"
 import Level4Class2Math from "./component/class2/mathQuizLevel/Level4Class1Math";
 import Level5Class2Math from "./component/class2/mathQuizLevel/Level5Class1Math";
 import Chat from "./component/chat/Chat";
-import Chat1 from "./component/chat/chat_category/chat_with_animal/Chat_with_animals";
-import Chat_with_animals from "./component/chat/chat_category/chat_with_animal/Chat_with_animals";
+// import Chat1 from "./component/chat/chat_category/chat_with_animal/Chat_with_animals";
+import Chat_with_animals from "./component/chat/chat_category/yourself/Chat_with_animals";
+import With_animal from "./component/chat/chat_category/animal/With_animal";
+// import With_animal from "./component/chat/chat_category/animal/With_animal";
 
 function App() {
   const [name, setName] = useState("");
@@ -296,10 +298,8 @@ function App() {
                     element={<Level5Class1Math />}
                   />
                   {/* math class 1 end */}
-
                   {/* math class 2 start */}
                   <Route path="/class2/math" element={<Math2 />} />
-
                   <Route
                     path="/class2/math/math_level1"
                     element={<Level1Class2Math />}
@@ -321,13 +321,13 @@ function App() {
                     element={<Level5Class2Math />}
                   />
                   {/* maths class 2 end */}
-
                   {/* chat  route */}
                   <Route path="/chat_quiz" element={<Chat />} />
                   <Route
                     path="/chat_quiz/chat_with_animals"
                     element={<Chat_with_animals />}
                   />
+                  <Route path="/chat_quiz/animal" element={<With_animal />} />
                 </Routes>
               </div>
             </div>
