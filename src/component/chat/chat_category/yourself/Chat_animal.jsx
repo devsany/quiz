@@ -34,6 +34,8 @@ const Chat_animal = () => {
     console.log("chat length", chat.length);
     setResult([...result, chat[number]]);
     setIsDisabled(true);
+    setInputValue("");
+
   };
 
   const handleFinalResultBack = () => {

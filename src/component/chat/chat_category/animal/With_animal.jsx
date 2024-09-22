@@ -15,6 +15,21 @@ const With_animal = () => {
           <NavLink to="/chat_quiz/animal">
             <div className="chat_nav_link">Chat with Animals</div>
           </NavLink>
+          <NavLink to="/chat_quiz/bird">
+            <div className="chat_nav_link">Chat with Birds</div>
+          </NavLink>
+          <NavLink to="/chat_quiz/body">
+            <div className="chat_nav_link">Chat with Body</div>
+          </NavLink>
+          <NavLink to="/chat_quiz/fruit">
+            <div className="chat_nav_link">Chat with Fruit</div>
+          </NavLink>
+          <NavLink to="/chat_quiz/vegetable">
+            <div className="chat_nav_link">Chat with vegetable</div>
+          </NavLink>
+          <NavLink to="/chat_quiz/math">
+            <div className="chat_nav_link">Chat with Numbers</div>
+          </NavLink>
         </div>
 
         <div className="chat_area">

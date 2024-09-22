@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import Chat_animal from "./Chat_animal";
+// import Chat_animal from "../../chat_with_animal/yourself/Chat_animal";
+import Animal from "./Math";
+import Math from "./Math";
 
-const Chat_with_animals = () => {
+const With_math = () => {
   const nav = useNavigate();
   return (
     <div>
@@ -35,11 +37,11 @@ const Chat_with_animals = () => {
           <button className="button-4" onClick={() => nav("/chat_quiz")}>
             Back
           </button>
-          <Chat_animal />
+          <Math />
         </div>
       </div>
     </div>
   );
 };
 
-export default Chat_with_animals;
+export default With_math;

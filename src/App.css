@@ -117,7 +117,7 @@ select {
 }
 .first {
   padding-top: 20px;
-  color: #5894c0;
+  color: #1f3d52;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -205,7 +205,53 @@ select {
   box-shadow: rgba(0, 0, 0, 0.3) 0 3px 3px inset;
   outline: 0;
 }
+/* 
+<!-- HTML !-->
+<button class="button-40" role="button">Button 40</button> */
 
+/* CSS */
+.button-40 {
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none #6b7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: 0.2s;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button-40:hover {
+  background-color: #374151;
+}
+
+.button-40:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-40 {
+    padding: 0.75rem 1.5rem;
+  }
+}
 .button-44:hover {
   border-bottom-style: none;
   border-color: #dadada;
@@ -218,7 +264,7 @@ select {
   font-weight: 900;
   letter-spacing: 2px;
   text-align: center;
-  color: #e62143;
+  color: #252525;
 }
 .home_layout {
   display: flex;
@@ -1349,6 +1395,7 @@ div:hover {
 .chat_nav_main {
   text-align: center;
   width: 25%;
+  height: 88.9vh;
   /* border-right: 1px solid black; */
   background-color: #ddd;
 }
@@ -1382,7 +1429,9 @@ div:hover {
   display: grid;
   /* align-items: ; */
   height: 68vh;
-  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
   align-content: space-between;
 }
 .chat_input_field input {

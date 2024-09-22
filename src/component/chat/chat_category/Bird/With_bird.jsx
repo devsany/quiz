@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import Chat_animal from "./Chat_animal";
+// import Chat_animal from "../../chat_with_animal/yourself/Chat_animal";
+import Bird from "./Bird";
 
-const Chat_with_animals = () => {
+const With_bird = () => {
   const nav = useNavigate();
   return (
     <div>
@@ -14,15 +15,16 @@ const Chat_with_animals = () => {
           <NavLink to="/chat_quiz/animal">
             <div className="chat_nav_link">Chat with Animals</div>
           </NavLink>
-          <NavLink to="/chat_quiz/bird">
+          <NavLink to="/chat_quiz/Bird">
             <div className="chat_nav_link">Chat with Birds</div>
           </NavLink>
-          <NavLink to="/chat_quiz/body">
+          <NavLink to="/chat_quiz/Body">
             <div className="chat_nav_link">Chat with Body</div>
           </NavLink>
           <NavLink to="/chat_quiz/fruit">
             <div className="chat_nav_link">Chat with Fruit</div>
           </NavLink>
+
           <NavLink to="/chat_quiz/vegetable">
             <div className="chat_nav_link">Chat with vegetable</div>
           </NavLink>
@@ -35,11 +37,11 @@ const Chat_with_animals = () => {
           <button className="button-4" onClick={() => nav("/chat_quiz")}>
             Back
           </button>
-          <Chat_animal />
+          <Bird />
         </div>
       </div>
     </div>
   );
 };
 
-export default Chat_with_animals;
+export default With_bird;

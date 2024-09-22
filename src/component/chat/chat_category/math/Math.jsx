@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { chat_animals_question } from "../api/api";
+import { chat_math_question } from "../api/api";
 
-const Animal = () => {
-  //   const chat_animals_question = useMemo(() => chat_Question, []);
-  const [chat, setChat] = useState(chat_animals_question);
+const Math = () => {
+  //   const chat_body_question = useMemo(() => chat_Question, []);
+  const [chat, setChat] = useState(chat_math_question);
   const [number, setNumber] = useState(0);
   const [inputValue, setInputValue] = useState("");
   const [result, setResult] = useState([]);
@@ -133,4 +133,4 @@ const Animal = () => {
   );
 };
 
-export default Animal;
+export default Math;

@@ -49,6 +49,11 @@ import Chat from "./component/chat/Chat";
 // import Chat1 from "./component/chat/chat_category/chat_with_animal/Chat_with_animals";
 import Chat_with_animals from "./component/chat/chat_category/yourself/Chat_with_animals";
 import With_animal from "./component/chat/chat_category/animal/With_animal";
+import With_bird from "./component/chat/chat_category/Bird/With_bird";
+import With_body from "./component/chat/chat_category/body/With_body";
+import With_fruit from "./component/chat/chat_category/fruit/With_fruit";
+import With_vegetable from "./component/chat/chat_category/vegetable/With_vegetable";
+import With_math from "./component/chat/chat_category/math/With_math";
 // import With_animal from "./component/chat/chat_category/animal/With_animal";
 
 function App() {
@@ -158,7 +163,7 @@ function App() {
                     onChange={(e) => setStandard(e.target.value)}
                   />
                 </div>
-                <button className="buttonMain" type="submit">
+                <button className="button-40" type="submit">
                   Submit
                 </button>
               </form>
@@ -328,6 +333,14 @@ function App() {
                     element={<Chat_with_animals />}
                   />
                   <Route path="/chat_quiz/animal" element={<With_animal />} />
+                  <Route path="/chat_quiz/bird" element={<With_bird />} />
+                  <Route path="/chat_quiz/body" element={<With_body />} />
+                  <Route path="/chat_quiz/fruit" element={<With_fruit />} />
+                  <Route path="/chat_quiz/math" element={<With_math />} />
+                  <Route
+                    path="/chat_quiz/vegetable"
+                    element={<With_vegetable />}
+                  />
                 </Routes>
               </div>
             </div>
