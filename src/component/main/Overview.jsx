@@ -15,7 +15,7 @@ const Overview = () => {
         <OverView_Template
           img="class_1_overview.png"
           class="Class 2"
-          class_number="class"
+          class_number="class2"
         />
 
         <OverView_Template
