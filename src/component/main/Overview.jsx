@@ -14,14 +14,14 @@ const Overview = () => {
 
         <OverView_Template
           img="class_1_overview.png"
-          class="Class 1"
-          class_number="class1"
+          class="Class 2"
+          class_number="class2"
         />
 
         <OverView_Template
           img="class_1_overview.png"
-          class="Class 1"
-          class_number="class1"
+          class="Class 3"
+          class_number="class3"
         />
       </div>
     </div>
